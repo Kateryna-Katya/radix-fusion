@@ -1,56 +1,418 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/radix-fusion/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radix-Fusion | Инновации на пальцах</title>
+    <meta name="description" content="Образовательная платформа нового поколения. Технологии, которые работают на вас.">
+
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/radix-fusion/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/radix-fusion/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/radix-fusion/assets/styles-Cv0SrEeg.css">
   </head>
-  <body>
+  <body class="page">
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
+  <div class="header__container container">
+      <a href="#" class="header__logo">
+          <span class="header__logo-icon">⟡</span> Radix-Fusion
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+
+      <nav class="header__nav">
+          <ul class="header__menu">
+              <li class="header__item"><a href="#hero" class="header__link">Главная</a></li>
+              <li class="header__item"><a href="#about" class="header__link">О платформе</a></li>
+              <li class="header__item"><a href="#innovations" class="header__link">Инновации</a></li>
+              <li class="header__item"><a href="#education" class="header__link">Обучение</a></li>
+              <li class="header__item"><a href="#benefits" class="header__link">Преимущества</a></li>
+              <li class="header__item"><a href="#faq" class="header__link">FAQ</a></li>
+          </ul>
+      </nav>
+
+      <div class="header__actions">
+          <a href="#contact" class="btn btn--small header__btn">Начать</a>
+          <button class="header__burger" aria-label="Открыть меню">
+              <i data-lucide="menu"></i>
+          </button>
+      </div>
   </div>
 </header>
 
-
-    <main>
+    <main class="main" id="main-content">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+  <div class="container hero__container">
+
+      <div class="hero__content">
+          <span class="hero__badge">
+              <i data-lucide="sparkles"></i> Платформа года
+          </span>
+          <h1 class="hero__title">
+              Воплотите мечты <br>
+              в <span class="text-gradient">реальность</span>
+          </h1>
+          <p class="hero__desc">
+              Передовая цифровая инфраструктура. Инновации на пальцах для тех, кто строит будущее. Решения, которые меняют правила игры.
+          </p>
+
+          <div class="hero__actions">
+              <a href="#contact" class="btn header__btn">Начать сейчас</a>
+              <a href="#about" class="btn btn--outline">
+                  Узнать детали <i data-lucide="arrow-right"></i>
+              </a>
+          </div>
+
+          <div class="hero__stats">
+              <div class="hero__stat-item">
+                  <span class="hero__stat-num">2 мин</span>
+                  <span class="hero__stat-label">Быстрый старт</span>
+              </div>
+              <div class="hero__stat-item">
+                  <span class="hero__stat-num">EU</span>
+                  <span class="hero__stat-label">Доступно в Европе</span>
+              </div>
+          </div>
+      </div>
+
+      <div class="hero__visual">
+          <div class="liquid-wrapper">
+              <img src="/radix-fusion/assets/one-BcPYowiv.jpg" alt="Innovation Visual" class="liquid-img">
+          </div>
+      </div>
+
+  </div>
+
+  <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+      <defs>
+          <filter id="liquidFilter">
+              <feTurbulence type="fractalNoise" baseFrequency="0.01 0.005" numOctaves="3" result="noise" seed="0" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+      </defs>
+  </svg>
+</section>
+<section class="section about" id="about">
+  <div class="container">
+      <div class="section__header">
+          <h2 class="section__title">Технологии, которые <br>работают на вас</h2>
+          <p class="section__subtitle">Мы объединили передовые алгоритмы и удобный интерфейс.</p>
+      </div>
+
+      <div class="about__grid">
+          <div class="about__card about__card--large">
+              <i data-lucide="layers" class="about__icon"></i>
+              <h3>Экосистема будущего</h3>
+              <p>Комплексный подход к внедрению цифровых решений. От идеи до масштабирования за считанные дни.</p>
+          </div>
+          <div class="about__card">
+              <i data-lucide="zap" class="about__icon"></i>
+              <h3>Мгновенный старт</h3>
+              <p>Подключение занимает 2 минуты. Без сложных настроек.</p>
+          </div>
+          <div class="about__card">
+              <i data-lucide="shield-check" class="about__icon"></i>
+              <h3>Безопасность</h3>
+              <p>Шифрование данных по стандартам ЕС.</p>
+          </div>
+          <div class="about__card about__card--wide">
+              <i data-lucide="trending-up" class="about__icon"></i>
+              <h3>Стратегия роста</h3>
+              <p>Инструменты аналитики, которые помогают принимать верные решения на основе больших данных.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section innovations" id="innovations">
+  <div class="container">
+      <div class="section__header">
+          <h2 class="section__title">Инновации на пальцах</h2>
+      </div>
+
+      <div class="innovations__wrapper">
+          <article class="inn-card">
+              <div class="inn-card__visual gradient-1"></div>
+              <div class="inn-card__content">
+                  <h3>AI-Ассистенты</h3>
+                  <p>Автоматизация рутины с помощью нейросетей нового поколения.</p>
+              </div>
+          </article>
+
+          <article class="inn-card">
+              <div class="inn-card__visual gradient-2"></div>
+              <div class="inn-card__content">
+                  <h3>Smart Analytics</h3>
+                  <p>Прогнозы рынка с точностью до 94% благодаря Big Data.</p>
+              </div>
+          </article>
+
+          <article class="inn-card">
+              <div class="inn-card__visual gradient-3"></div>
+              <div class="inn-card__content">
+                  <h3>Blockchain Core</h3>
+                  <p>Прозрачность транзакций и неизменность данных.</p>
+              </div>
+          </article>
+      </div>
+  </div>
+</section>
+
+<section class="section steps" id="education">
+  <div class="container">
+      <div class="section__header">
+          <h2 class="section__title">Ваш путь к успеху</h2>
+          <p class="section__subtitle">Всего 3 шага отделяют вас от цели.</p>
+      </div>
+
+      <div class="steps__list">
+          <div class="step">
+              <div class="step__num">01</div>
+              <h3 class="step__title">Регистрация</h3>
+              <p class="step__desc">Создайте аккаунт и получите доступ к базовым инструментам платформы.</p>
+          </div>
+          <div class="step">
+              <div class="step__num">02</div>
+              <h3 class="step__title">Обучение</h3>
+              <p class="step__desc">Изучите материалы в удобном формате. Практики, применимые уже сегодня.</p>
+          </div>
+          <div class="step">
+              <div class="step__num">03</div>
+              <h3 class="step__title">Результат</h3>
+              <p class="step__desc">Применяйте знания и масштабируйте свой проект с поддержкой экспертов.</p>
+          </div>
+      </div>
+  </div>
+</section>
+<section class="section benefits" id="benefits">
+  <div class="container">
+      <div class="section__header">
+          <h2 class="section__title">Почему выбирают нас</h2>
+          <p class="section__subtitle">Платформа года по версии пользователей из 12 стран ЕС.</p>
+      </div>
+
+      <div class="benefits__grid">
+          <div class="benefit-card">
+              <div class="benefit-card__icon">
+                  <i data-lucide="globe"></i>
+              </div>
+              <h3>Глобальный доступ</h3>
+              <p>Работайте из любой точки мира. Платформа оптимизирована для всех устройств.</p>
+          </div>
+
+          <div class="benefit-card">
+              <div class="benefit-card__icon">
+                  <i data-lucide="trending-up"></i>
+              </div>
+              <h3>Пассивный доход</h3>
+              <p>Проверенные стратегии роста на базе инноваций, которые работают за вас 24/7.</p>
+          </div>
+
+          <div class="benefit-card">
+              <div class="benefit-card__icon">
+                  <i data-lucide="shield-check"></i>
+              </div>
+              <h3>Надежность</h3>
+              <p>Экспертная поддержка на всех этапах и полная прозрачность процессов.</p>
+          </div>
+
+          <div class="benefit-card">
+              <div class="benefit-card__icon">
+                  <i data-lucide="zap"></i>
+              </div>
+              <h3>Быстрый старт</h3>
+              <p>Легко разобраться без опыта. Первые результаты возможны уже в день регистрации.</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq">
+  <div class="container faq__container">
+      <div class="section__header">
+          <h2 class="section__title">Частые вопросы</h2>
+          <p class="section__subtitle">Всё, что нужно знать перед стартом.</p>
+      </div>
+
+      <div class="faq__list">
+          <details class="faq__item">
+              <summary class="faq__question">
+                  Нужен ли опыт в IT или финансах?
+                  <span class="faq__icon"><i data-lucide="chevron-down"></i></span>
+              </summary>
+              <div class="faq__answer">
+                  <p>Нет, платформа создана для обычных людей. Мы предоставляем пошаговое обучение и интуитивно понятные инструменты, чтобы вы могли начать без специальных знаний.</p>
+              </div>
+          </details>
+
+          <details class="faq__item">
+              <summary class="faq__question">
+                  Сколько времени это занимает?
+                  <span class="faq__icon"><i data-lucide="chevron-down"></i></span>
+              </summary>
+              <div class="faq__answer">
+                  <p>На старте достаточно уделять платформе 20–30 минут в день. Многие процессы автоматизированы благодаря нашим AI-алгоритмам.</p>
+              </div>
+          </details>
+
+          <details class="faq__item">
+              <summary class="faq__question">
+                  Это платно?
+                  <span class="faq__icon"><i data-lucide="chevron-down"></i></span>
+              </summary>
+              <div class="faq__answer">
+                  <p>Регистрация и доступ к базовым материалам бесплатны. Для использования продвинутых инструментов могут потребоваться инвестиции, о которых вам расскажет менеджер.</p>
+              </div>
+          </details>
+
+          <details class="faq__item">
+              <summary class="faq__question">
+                  Какие гарантии безопасности?
+                  <span class="faq__icon"><i data-lucide="chevron-down"></i></span>
+              </summary>
+              <div class="faq__answer">
+                  <p>Мы используем современные протоколы шифрования данных и следуем политике конфиденциальности GDPR, принятой в Европейском Союзе.</p>
+              </div>
+          </details>
+      </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container contact__container">
+
+      <div class="contact__info">
+          <h2 class="section__title">Начать сейчас</h2>
+          <p class="contact__desc">
+              Заполните форму, и мы свяжемся с вами для бесплатной консультации.
+              Откройте новые возможности уже сегодня.
+          </p>
+
+          <div class="contact__details">
+              <div class="contact__item">
+                  <i data-lucide="mail"></i>
+                  <a href="mailto:support@radix-fusion.blog">support@radix-fusion.blog</a>
+              </div>
+              <div class="contact__item">
+                  <i data-lucide="check-circle"></i>
+                  <span>Официальный партнер в ЕС</span>
+              </div>
+          </div>
+      </div>
+
+      <form class="contact__form" id="contact-form">
+          <div class="form__group">
+              <label for="name" class="form__label">Ваше имя</label>
+              <input type="text" id="name" class="form__input" placeholder="Иван Петров" required>
+          </div>
+
+          <div class="form__group">
+              <label for="email" class="form__label">Email</label>
+              <input type="email" id="email" class="form__input" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form__group">
+              <label for="phone" class="form__label">Телефон</label>
+              <input type="tel" id="phone" class="form__input" placeholder="+44..." required>
+              <small class="form__hint">Только цифры</small>
+          </div>
+
+          <div class="form__group">
+              <label class="form__label">Проверка: <span id="captcha-question">2 + 2 = ?</span></label>
+              <input type="number" id="captcha-input" class="form__input" required>
+          </div>
+
+          <div class="form__checkbox-group">
+              <input type="checkbox" id="agreement" required>
+              <label for="agreement">Я согласен с <a href="./privacy.html">Политикой конфиденциальности</a></label>
+          </div>
+
+          <button type="submit" class="btn header__btn form__btn">Отправить заявку</button>
+
+          <div class="form__success" id="form-success" style="display: none;">
+              <i data-lucide="check-circle"></i>
+              <h3>Заявка принята!</h3>
+              <p>Мы свяжемся с вами по адресу support@radix-fusion.blog в ближайшее время.</p>
+          </div>
+      </form>
+
+  </div>
+</section>
+
+
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+      <div class="footer__grid">
+
+          <div class="footer__col footer__col--brand">
+              <a href="#" class="footer__logo">Radix-Fusion</a>
+              <p class="footer__desc">
+                  Передовая цифровая инфраструктура для тех, кто хочет понять технологии. Решения, которые меняют правила игры.
+              </p>
+              <p class="footer__copyright">
+                  &copy; <span id="year"></span> Radix-Fusion. Все права защищены.
+              </p>
+          </div>
+
+          <div class="footer__col footer__col--nav">
+              <h3 class="footer__title">Меню</h3>
+              <ul class="footer__menu">
+                  <li><a href="#about" class="footer__link">О платформе</a></li>
+                  <li><a href="#innovations" class="footer__link">Инновации</a></li>
+                  <li><a href="#education" class="footer__link">Обучение</a></li>
+                  <li><a href="#blog" class="footer__link">Блог</a></li>
+              </ul>
+          </div>
+
+          <div class="footer__col footer__col--legal">
+              <h3 class="footer__title">Информация</h3>
+              <ul class="footer__links">
+                  <li><a href="privacy.html" class="footer__link">Политика конфиденциальности</a></li>
+                  <li><a href="cookies.html" class="footer__link">Cookies Policy</a></li>
+                  <li><a href="terms.html" class="footer__link">Условия использования</a></li>
+                  <li><a href="return.html" class="footer__link">Политика возврата</a></li>
+                  <li><a href="disclaimer.html" class="footer__link">Отказ от ответственности</a></li>
+                  <li><a href="personal-data-policy.html" class="footer__link">Обработка данных</a></li>
+              </ul>
+
+              <div class="footer__contacts">
+                  <h3 class="footer__title">Контакты</h3>
+                  <a href="mailto:support@radix-fusion.blog" class="footer__contact-link">
+                      <i data-lucide="mail"></i> support@radix-fusion.blog
+                  </a>
+                  <a href="tel:+442079460958" class="footer__contact-link">
+                      <i data-lucide="phone"></i> +44 20 7946 0958
+                  </a>
+                  <address class="footer__address">
+                      <i data-lucide="map-pin"></i>
+                      82 King Street, Manchester, M2 4WQ, UK
+                  </address>
+                  <p class="footer__note">Платформа уже доступна в Европе</p>
+              </div>
+          </div>
+
+      </div>
   </div>
 </footer>
+    <div class="cookie-popup" id="cookie-popup">
+      <div class="cookie-popup__content">
+          <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.</p>
+          <button class="btn btn--small header__btn" id="accept-cookies">Хорошо</button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/curtainsjs@8.1.2/dist/curtains.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+  </script>
   </body>
 </html>
